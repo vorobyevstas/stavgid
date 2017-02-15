@@ -1,9 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Bold.otf">
+            <string>SFUIText-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -16,12 +26,40 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="gerb" translatesAutoresizingMaskIntoConstraints="NO" id="Nga-xz-7ao">
+                                <rect key="frame" x="0.0" y="96" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nga-xz-7ao" secondAttribute="height" multiplier="1:1" id="5fZ-dL-z9A"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гид по Ставрополю" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="zjy-3b-HXC">
+                                <rect key="frame" x="0.0" y="471" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zjy-3b-HXC" secondAttribute="height" multiplier="75:8" id="3Xy-yY-5fP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nga-xz-7ao" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MLS-Wt-QmC"/>
+                            <constraint firstAttribute="trailing" secondItem="Nga-xz-7ao" secondAttribute="trailing" id="Te0-DQ-8pn"/>
+                            <constraint firstAttribute="trailing" secondItem="zjy-3b-HXC" secondAttribute="trailing" id="bgz-Sz-dDu"/>
+                            <constraint firstItem="zjy-3b-HXC" firstAttribute="top" secondItem="Nga-xz-7ao" secondAttribute="bottom" id="g7M-bu-8Rp"/>
+                            <constraint firstItem="zjy-3b-HXC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gZ0-cd-f6B"/>
+                            <constraint firstItem="Nga-xz-7ao" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="nXx-sf-6m7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gerb" width="2000" height="2000"/>
+    </resources>
 </document>

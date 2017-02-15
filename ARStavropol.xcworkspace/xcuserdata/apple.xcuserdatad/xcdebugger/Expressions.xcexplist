@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ARModuleViewController setInitialVerticalLevels]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController calculateDistanceAndAzimuthForAnnotations:onlyForActiveAnnotations:]:ARModuleViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.annotations">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController reload:calculateVerticalLevels:createAnnotationViews:]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController reloadAnnotations]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController setAnnotations:]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController setAnnotations2:]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController maxVisibleAnnotations]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__41-[ARModuleViewController viewWillAppear:]_block_invoke:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController getMaxVerticalLevel]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController positionAnnotationViews]:ARModuleViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotation.annotationView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "annotation.annotationView.bounds.size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController calculateVerticalLevels]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController createAnnotationViews]:ARModuleViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotation.location.coordinate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController updateAnnotationsForCurrentHeading]:ARModuleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ARModuleViewController maxVerticalLevel]:ARModuleViewController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

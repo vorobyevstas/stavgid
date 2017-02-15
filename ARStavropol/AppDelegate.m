@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import "LeftMenuModuleViewController.h"
+@import GoogleMaps;
 
 @interface AppDelegate ()
 
@@ -17,6 +21,50 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Fabric with:@[[Crashlytics class]]];
+    [GMSServices provideAPIKey:@"AIzaSyDZTVTmbLQIyGvtJ2fY6erE-ipdqnBvYnw"];
+    
+//    [SVProgressHUD setBackgroundColor:[UIColor blackColor]];
+//    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+//    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    
+//    self.window.rootViewController = self.firstViewController;
+    
+    self.firstViewController = [[SlideNavigationController alloc] initWithRootViewController:self.mapController];
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    //
+    LeftMenuModuleViewController *leftMenu = (LeftMenuModuleViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"LeftMenuModuleViewController"];
+    
+    [SlideNavigationController sharedInstance].leftMenu = leftMenu;//self.leftController;
+    [SlideNavigationController sharedInstance].enableShadow = YES;
+    [SlideNavigationController sharedInstance].enableSwipeGesture = YES;
+    
+    [MySingleton sharedMySingleton].menu = 0;
+    [MySingleton sharedMySingleton].reload = 0;
+    
+    [[MySingleton sharedMySingleton] bk_addObserverForKeyPath:@"menu" task:^(id task){
+        NSLog(@"appdelegate wishes changed %@ %li", task, (long)[MySingleton sharedMySingleton].menu);
+        [MySingleton sharedMySingleton].reload = 0;
+        //        [self viewWillAppear:NO];
+        if([MySingleton sharedMySingleton].menu == 1) {
+            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:self.mapController withCompletion:nil];
+        }
+        else if([MySingleton sharedMySingleton].menu == 2) {
+            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:self.placeController withCompletion:nil];
+        }
+        else if([MySingleton sharedMySingleton].menu == 3) {
+            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:self.aboutController withCompletion:nil];
+        }
+    }];
+    
+    //    self.firstViewController.leftMenu = self.leftController;
+    //    self.firstViewController.enableShadow = YES;
+    //    self.firstViewController.enableSwipeGesture = YES;
+    //    [self.firstViewController setViewControllers:@[self.newsController] animated:NO];
+    
+    self.window.rootViewController = self.firstViewController;
+    
     return YES;
 }
 

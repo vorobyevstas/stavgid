@@ -11,7 +11,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property SlideNavigationController *firstViewController;
+@property UIViewController *mapController;
+@property UIViewController *placeController;
+@property UIViewController *aboutController;
 
 @end
 

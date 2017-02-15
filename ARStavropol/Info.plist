@@ -24,6 +24,49 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Library Access Warning</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>56a07015533cb7d51a6222a8acc8f6b8f875f4e6</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Need camera access for uploading Images</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
+	<key>TyphoonAutoInjectionEnabled</key>
+	<true/>
+	<key>TyphoonInitialAssemblies</key>
+	<array>
+		<string>SlideNavigationModuleAssembly</string>
+		<string>DescriptionModuleAssembly</string>
+		<string>AboutModuleAssembly</string>
+		<string>PlaceModuleAssembly</string>
+		<string>LeftMenuModuleAssembly</string>
+		<string>ARModuleAssembly</string>
+		<string>ApplycationAssembly</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-UI-Text-Bold.otf</string>
+		<string>SF-UI-Text-Regular.otf</string>
+		<string>SF-UI-Text-Medium.otf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
