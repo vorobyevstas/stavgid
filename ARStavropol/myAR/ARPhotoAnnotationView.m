@@ -1,23 +1,15 @@
 //
-//  AnnotationView.m
+//  ARPhotoAnnotationView.m
 //  ARStavropol
 //
-//  Created by apple on 13.02.17.
+//  Created by apple on 19.02.17.
 //  Copyright © 2017 Vorobyev Stanislav. All rights reserved.
 //
 
-#import "AnnotationView.h"
+#import "ARPhotoAnnotationView.h"
 
-@implementation AnnotationView
+@implementation ARPhotoAnnotationView
 
-- (void)didMoveToSuperview {
-    [super didMoveToSuperview];
-    
-}
-
-- (void)initWithAnnotation:(ARAnnotation *)annotation {
-    
-}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
